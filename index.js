@@ -39,13 +39,13 @@ async function openai_test(text) {
         "presence_penalty": 0
       }`;
 
-    $.ajax({
+    await $.ajax({
         "async": true,
         "crossDomain": true,
         "url": url,
         "method": "POST",
         "headers": {
-            "Authorization": "Bearer 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",
+            "Authorization": "Bearer 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",
             "Content-Type": "application/json",
         },
         data: data,
