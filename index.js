@@ -62,7 +62,7 @@ async function openai_test(text) {
         "url": url,
         "method": "POST",
         "headers": {
-            "Authorization": "Bearer {API}",
+            "Authorization": "Bearer {Your_API}",
             "Content-Type": "application/json",
         },
         data: data,
@@ -71,12 +71,13 @@ async function openai_test(text) {
             result = text.replaceAll("\n", "<br>")
             $("#result-text").html(`<p>${result}<br><br></p>`)
             $(".loading_class").remove()
-            $("#input-text").val("Write a")
+            $("#input-text").val("")
 
 
         },
         error: function (error) {
-            $("#result-text").html(`<p><i>Sorry. Unable to compile</i></p>`)
+            $("#result-text").html(`<p><i>Sorry. An error occured</i></p>`)
+            $(".loading_class").remove()
         }
     })
 }
